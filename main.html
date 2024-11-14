@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Gestión de Productos</h1>
+
+    <div>
+        <h2>Agregar Producto</h2>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="descripcion" placeholder="Descripción">
+        <input type="number" id="cantidad" placeholder="Cantidad">
+        <input type="number" id="precio" placeholder="Precio">
+        <button onclick="addProduct()">Agregar Producto</button>
+    </div>
+
+    <div>
+        <h2>Buscar Producto por ID</h2>
+        <input type="number" id="productId" placeholder="ID del Producto">
+        <button onclick="fetchProductById()">Buscar Producto</button>
+        <div id="productDetails"></div>
+    </div>
+
+    <div>
+        <h2>Eliminar Producto por ID</h2>
+        <input type="number" id="deleteProductId" placeholder="ID del Producto a Eliminar">
+        <button onclick="deleteProduct()">Eliminar Producto</button>
+    </div>
+
+    <div>
+        <h2>Lista de Productos</h2>
+        <button onclick="fetchProducts()">Actualizar Lista</button>
+        <ul id="productList"></ul>
+    </div>
+
+    <div>
+        <h2>Actualizar Producto</h2>
+        <input type="number" id="updateProductId" placeholder="ID del Producto a Actualizar">
+        <input type="text" id="updateNombre" placeholder="Nuevo Nombre">
+        <input type="text" id="updateDescripcion" placeholder="Nueva Descripción">
+        <input type="number" id="updateCantidad" placeholder="Nueva Cantidad">
+        <input type="number" id="updatePrecio" placeholder="Nuevo Precio">
+        <button onclick="updateProduct()">Actualizar Producto</button>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
+
